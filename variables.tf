@@ -24,18 +24,3 @@ variable "private_subnet_c" {
   description  = "The ID of private subnet in zone c."
   default      = ""
 }
-
-variable "public_subnet_a" {
-  description  = "The ID of public subnet in zone a."
-  default      = ""
-}
-
-variable "public_subnet_b" {
-  description  = "The ID of public subnet in zone b."
-  default      = ""
-}
-
-variable "public_subnet_c" {
-  description  = "The ID of public subnet in zone c."
-  default      = ""
-}
