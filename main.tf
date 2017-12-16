@@ -24,6 +24,7 @@ resource "aws_efs_mount_target" "private_subnet_c" {
 data "null_data_source" "values" {
   inputs = {
     volume                        = "${aws_efs_file_system.this.id}"
+    dns_name                      = "${aws_efs_file_system.this.dns_name}"
     mount_target_private_subnet_a = "${join(",", aws_efs_mount_target.private_subnet_a.*.id)}"
     mount_target_private_subnet_b = "${join(",", aws_efs_mount_target.private_subnet_b.*.id)}"
     mount_target_private_subnet_c = "${join(",", aws_efs_mount_target.private_subnet_c.*.id)}"
